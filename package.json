@@ -1,43 +1,26 @@
 {
-  "name": "PHP dynamic analysis tool",
-  "description": "tool that detects vulnerabilities based on log files.",
-  "version": "2.0.1",
-  "private": true,
-  "author": "Filipe Apolinário",
-  "main": "./main.js",
-  "maintainers": [
-    "Filipe Apolinário <filipe.apolinario@tecnico.ulisboa.pt>"
-  ],
-  "dependencies": {
-    "grunt-sed": ""
-  },
-  "engines": {
-    "node": "0.10.x",
-    "npm": "1.2.x"
-  },
-  "devDependencies": {},
+  "name": "dynamysis-php",
+  "version": "1.0.0",
+  "description": "PHP dynamic analysis tool",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/f-apolinario/remote-saned-scanner.git"
+    "url": "git+https://github.com/Rostou/DynamysisPHP.git"
   },
   "keywords": [
-    "media",
-    "server",
-    "multi",
-    "client",
-    "central",
-    "server",
-    "video",
-    "and",
-    "music",
-    "streamer"
+    "php"
   ],
+  "author": "Rocheteau, Polly, GamDias",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/f-apolinario/remote-saned-scanner/issues"
+    "url": "https://github.com/Rostou/DynamysisPHP/issues"
   },
-  "homepage": "https://github.com/f-apolinario/remote-saned-scanner#readme"*/
+  "homepage": "https://github.com/Rostou/DynamysisPHP#readme",
+  "dependencies": {
+    "grunt": "^0.4.5",
+    "grunt-sed": "^0.1.1"
+  }
 }
