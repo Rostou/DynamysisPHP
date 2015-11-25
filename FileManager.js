@@ -11,7 +11,7 @@ function printVulnObj(o) {
 
 function printinstructions(instructions) {
   console.log('--------------------')
-  instructions.forEach(function(d){console.log(d)})
+  instructions.forEach(function (d) { console.log(d) })
   console.log('--------------------')
 }
 
@@ -28,15 +28,15 @@ function importVulnsFromConfig(callbackFunc) {
       var obj = { "vuln": a[i], "entry-points": a[i + 1].split(','), "sanitizationFuncs": a[i + 2].split(','), "sinks": a[i + 3].split(',') }
       objArray.push(obj);
     }
-    
+
     callbackFunc(objArray);
   });
 }
 
-function importTrace(trace) {
+function importTrace(trace, callbackFunc) {
   fs.readFile('samples/traces/' + trace, 'utf8', function (err, data) {
     var instructionArray = data.split('\r\n');
-    return instructionArray;
+    callbackFunc(instructionArray);
   });
 }
 module.exports = {
