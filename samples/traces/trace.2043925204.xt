@@ -1,0 +1,18 @@
+TRACE START [2015-11-23 14:35:31]
+    0.0009     329112   -> {main}() /var/www/teste/badjoraz.php:0
+                         => $var = 'anitavaiapraia' /var/www/teste/badjoraz.php:2
+                         => $a = 0 /var/www/teste/badjoraz.php:3
+                         => $b = 'anitavaiapraia' /var/www/teste/badjoraz.php:4
+    0.0029     329516     -> mysql_query('SELECT * FROM sometable WHERE id = anitavaiapraia') /var/www/teste/badjoraz.php:6
+                           >=> FALSE
+                         => $a = 0 /var/www/teste/badjoraz.php:8
+    0.0061     329764     -> mysql_real_escape_string('anitavaiapraia') /var/www/teste/badjoraz.php:11
+                           >=> 'anitavaiapraia'
+    0.0061     329864     -> mysql_real_escape_string(0) /var/www/teste/badjoraz.php:12
+                           >=> '0'
+    0.0061     329936     -> sprintf('SELECT * FROM users WHERE user=\'%s\' AND password=\'%s\'', 'anitavaiapraia', '0') /var/www/teste/badjoraz.php:12
+                           >=> 'SELECT * FROM users WHERE user=\'anitavaiapraia\' AND password=\'0\''
+                         => $query = 'SELECT * FROM users WHERE user=\'anitavaiapraia\' AND password=\'0\'' /var/www/teste/badjoraz.php:12
+    0.0063       8612
+TRACE END   [2015-11-23 14:35:31]
+

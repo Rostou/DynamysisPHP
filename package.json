@@ -1,0 +1,43 @@
+{
+  "name": "PHP dynamic analysis tool",
+  "description": "tool that detects vulnerabilities based on log files.",
+  "version": "2.0.1",
+  "private": true,
+  "author": "Filipe Apolinário",
+  "main": "./main.js",
+  "maintainers": [
+    "Filipe Apolinário <filipe.apolinario@tecnico.ulisboa.pt>"
+  ],
+  "dependencies": {
+    "grunt-sed": ""
+  },
+  "engines": {
+    "node": "0.10.x",
+    "npm": "1.2.x"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/f-apolinario/remote-saned-scanner.git"
+  },
+  "keywords": [
+    "media",
+    "server",
+    "multi",
+    "client",
+    "central",
+    "server",
+    "video",
+    "and",
+    "music",
+    "streamer"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/f-apolinario/remote-saned-scanner/issues"
+  },
+  "homepage": "https://github.com/f-apolinario/remote-saned-scanner#readme"*/
+}
