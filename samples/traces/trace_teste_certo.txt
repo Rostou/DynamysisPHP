@@ -1,0 +1,6 @@
+1 -> teste_certo.php:0
+2 => teste_certo.php:2
+3 => teste_certo.php:3
+4 => teste_certo.php:4
+5 -> teste_certo.php:5
+6 -> teste_certo.php:6

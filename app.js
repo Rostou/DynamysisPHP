@@ -7,28 +7,20 @@ m.importVulnsFromConfig(function (a) {
     objArray.forEach(function (o) { m.printVulnObj(o) })  
     
     //import and print trace instructions
-    m.importInstructions("traces/trace.2043925204.xt", function (d) {
-        semanticsTraces = analyser.extractSemantics(d)
-        m.importInstructions("src_code/badjoraz.php", function (d) {
-            src_code_instructions = d;
-            console.log(d.forEach(function (l) {
-                console.log(l)
-            }))
+    m.importInstructions("traces/trace_teste_certo.txt", function (traceLines) {
+        
+        
+        m.importInstructions("src_code/teste_certo.php", function (codeLines) {
+            
+            
+            var obj = analyser.extractSemantics(traceLines,codeLines)
+            
+            var variables = Object.keys(obj.variables);
+            var functions = Object.keys(obj.functions);
+            
         })
-        console.log('variables')
-        semanticsTraces.variables.forEach(function (d) { 
-            console.log(d.linenumber, 
-                        d.instName,
-                        d.params,
-                        d.src.file,
-                        d.src.line) });
-        console.log('functions');
-        semanticsTraces.functions.forEach(function (d) { 
-            console.log(d.linenumber, 
-                        d.instName,
-                        d.params,
-                        d.src.file,
-                        d.src.line) });
+        
+        
     });
 })
 

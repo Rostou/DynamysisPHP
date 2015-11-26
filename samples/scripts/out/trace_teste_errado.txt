@@ -1,0 +1,5 @@
+1 -> teste_errado.php:0
+2 => teste_errado.php:2
+3 => teste_errado.php:3
+4 => teste_errado.php:4
+5 -> teste_errado.php:5
