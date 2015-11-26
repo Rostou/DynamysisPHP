@@ -9,19 +9,19 @@ function printVulnObj(o) {
   console.log('--------------------')
 }
 
-function printinstructions(instructions) {
+function printInstructions(instructions) {
   console.log('--------------------')
   instructions.forEach(function (d) { console.log(d) })
   console.log('--------------------')
 }
 
-function importVulnsFromConfig(callbackFunc) {
-  fs.readFile('samples/configs/config.in', 'utf8', function (err, data) {
+function importVulnsFromConfig(configPath,callbackFunc) {
+  fs.readFile(configPath, 'utf8', function (err, data) {
     if (err) {
       return console.log(err);
     }
-    console.log(data);
-    var a = data.split('\r\n')
+    //console.log(data);
+    var a = data.split('\n')
     var i = 0
     var objArray = [];
     for (var i = 0; i < a.length; i += 4) {
@@ -42,5 +42,6 @@ function importInstructions(trace, callbackFunc) {
 module.exports = {
   importVulnsFromConfig: importVulnsFromConfig,
   importInstructions: importInstructions,
-  printVulnObj: printVulnObj
+  printVulnObj: printVulnObj,
+  printInstructions:printInstructions
 }
