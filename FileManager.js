@@ -33,14 +33,14 @@ function importVulnsFromConfig(callbackFunc) {
   });
 }
 
-function importTrace(trace, callbackFunc) {
-  fs.readFile('samples/traces/' + trace, 'utf8', function (err, data) {
-    var instructionArray = data.split('\r\n');
+function importInstructions(trace, callbackFunc) {
+  fs.readFile('samples/' + trace, 'utf8', function (err, data) {
+    var instructionArray = data.split('\n');
     callbackFunc(instructionArray);
   });
 }
 module.exports = {
   importVulnsFromConfig: importVulnsFromConfig,
-  importTrace: importTrace,
+  importInstructions: importInstructions,
   printVulnObj: printVulnObj
 }
