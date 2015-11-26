@@ -1,9 +1,6 @@
 
-function analyseTracesintructions(vulnObj, instruction) {
 
-}
-
-function extractSemanticsFromInstructions(tracerLines, codeLines) {
+function analyseProgram(tracerLines, codeLines,vulnerabilities) {
     var variableInstructions = [];
     var functionInstructions = [];
 
@@ -44,15 +41,25 @@ function extractSemanticsFromInstructions(tracerLines, codeLines) {
             var value = code[1].split(")")[0];
 
             functionInstructions[variable] = value;
-
+            
+            var vulnerability = hasVulnerability(variable,vulnerabilities);
+            if(!vulnerability){
+                return;
+            }
+            
+            //backtrace
+            
         }
     })
 
     return { variables: variableInstructions, functions: functionInstructions };
 }
 
+function hasVulnerability(){
+    
+}
 
 
 module.exports = {
-    extractSemantics: extractSemanticsFromInstructions
+    analyseProgram: analyseProgram
 }
